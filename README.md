@@ -16,7 +16,7 @@
 
 ## Demo
 
-Check out the live website here: [Strong Body Mind]()
+Check out the live website here: [Strong Body Mind](https://lanaferzan.github.io/strong-body-mind/)
 
 ---
 

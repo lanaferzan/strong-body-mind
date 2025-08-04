@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+</head>
+<body>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color:  #ffffff;
+  background-color: #f8f4f0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+ul{
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff;
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom:16px;;
+}
+
+/* Navigation */
+.header {
+  position: relative;
+  min-height: 900px;
+  background-color:#ffffff ;
+  color: white;
+  
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000ef;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:16px 35px;
+}
+
+.logo h1 {
+  font-size: 27px;
+  font-weight: 600;
+}
+.logo h1 span{
+ color: #f67140;
+}
+
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-list a {
+  color: #F0F4F8;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+  position:relative;
+}
+
+.nav-list a:hover {
+ color: #f67140;
+  transition: all 0.3s ease;
+}
+
+
+.nav-list a:hover {
+  color: #f67140;
+}
+/* heroo */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+  background: linear-gradient(rgba(15, 15, 15, 0.7), rgba(3, 3, 3, 0.7)),
+  url('pics/black\ and\ orange\ gym\ \ \(1\).jpg') no-repeat center center/cover;
+}
+
+.hero h1 {
+  font-size: 70px;
+  color: #fcfcfc;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #fafafa;
+  max-width: 700px;
+}
+
+/* section */
+.mainsection{
+  background-color: #000000;
+  width: 100%;
+  padding: 60px 20px;
+  margin: 0; /* Removes any outside gaps */
+  box-sizing: border-box;
+}
+.section1 {
+  background: linear-gradient(-135deg, #3d3c3bb8, #322d2ab8,#000000a5);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.section1 img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.section-content1 {
+  max-width: 600px;
+  margin-left: 50px;
+}
+
+.section-content1 h3 {
+  color: #f67140;
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.section-content1 h2 {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.section-content1 p {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-right: 10px;
+}
+
+/* section1 */
+
+.section {
+  background: linear-gradient(135deg, #3d3c3bb8, #322d2ab8,#000000a5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.section img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.section-content {
+  max-width: 600px;
+  margin-left: 50px;
+}
+
+.section-content h3 {
+  color: #f67140;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.section-content h2 {
+  font-size: 13px;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.section-content p {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* section 2 */
+
+.section2 {
+  background: linear-gradient(-135deg, #3d3c3bb8, #322d2ab8,#000000a5);
+  /* background-color: #000000; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; 
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+
+
+.section2 img {
+  justify-self:right;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.section-content2 {
+  max-width: 600px;
+  margin-left: 50px;
+}
+
+.section-content2 h3 {
+  color: #f67140;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.section-content2 ul li {
+  list-style:circle;
+  font-size: 16px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.section-content2 p {
+  color: #747474;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-right: 10px;
+}
+
+
+ 
+  /* Footer */
+  .footer {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 40px 0 16px;;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin-bottom: 32px;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .footer-logo h2 {
+    font-size: 20px;
+    margin-bottom: 8px;}
+  
+  .footer-logo p {
+    opacity: 0.8;
+  }
+  
+  .footer-links {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color:  rgb(205, 205, 205);
+
+  }
+  
+  .footer-section ul li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+  
+  .footer-section a {
+    transition: all 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #f67140;
+    opacity: 1;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 8px solid #f67140;
+    font-size: 15px;
+    opacity: 0.7;
+  }
+
+  /* ================= toggle area ================= */
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: azure;
+  }
+ /* Responsive Design */
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .nav-list {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #000000ef;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+  
+    .nav-item {
+      margin: 16px 0;
+    }
+  
+    .nav-list.active {
+      left: 0;
+    }
+    .section, .section1, .section2 {
+      flex-direction: column;
+      padding: 30px 10px;
+    }
+  
+    .section-content, .section-content1, .section-content2 {
+      margin-left: 0;
+      text-align: center;
+    }
+    .section-content2 ul{
+      margin-left: 10px;
+    }
+    .hero {
+      height: 400px;
+    }
+    .hero h1 {
+      font-size: 40px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+  }
+  
+  /* Responsive Design */
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 12px 20px;
+  }
+
+  .logo h1 {
+    font-size: 22px;
+  }
+
+  .hero {
+    height: 400px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .section-content h3, .section-content1 h3, .section-content2 h3 {
+    font-size: 20px;
+  }
+  .section-content2 ul{
+    margin-left: 10px;
+  }
+
+  .footer-section h3 {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+}
+
+  </style>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <h1><span>S</span>trong <span>B</span>ody <span>M</span>ind</h1>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="home.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item"><a href="exersices.html">Workouts</a></li>
+          <li class="nav-item"><a href="products.html">Products</a></li>
+          <li class="nav-item"><a href="#nutrition">Nutrition</a></li>
+          <li class="nav-item"><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+  
+        </div>
+      </nav>
+    </div>
+
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>About Us</h1>
+  </section>
+<section class="mainsection">
+  <!-- Content Section -->
+  <section class="section1">
+    <img src="pics/who3.jpg" alt="Our Team">
+
+    <div class="section-content1">
+        <h3>GET TO KNOW US</h3>
+        <p>
+            At Strong Body, Mind & Fitness, we believe true strength comes from balance building a powerful body, sharpening the mind, and nurturing overall well-being. Founded with the vision of creating a welcoming space for everyone, from beginners to seasoned athletes, our fitness center offers expert training, top-tier equipment, and a supportive community. We are committed to helping you achieve your fitness goals while inspiring a lifelong passion for health and self-improvement.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <img src="pics/news4.jpg" alt="Our Team">
+
+    <div class="section-content">
+      <h3>WHO WE ARE</h3>
+      <p>
+        Strong Body, Mind & Fitness was founded by lifelong fitness enthusiasts and certified trainers, [Founder Name 1] and [Founder Name 2]. With over 20 years of combined experience in personal training, sports coaching, and nutrition, they set out to build a fitness center that goes beyond workouts — one that empowers individuals to transform their entire lifestyle. Their hands-on approach, passion for helping others, and deep understanding of fitness science make them trusted leaders in the health and wellness community
+      </p>
+    </div>
+  </section>
+  <section class="section2">
+    <img src="pics/who.jpg" alt="Our Team">
+
+    <div class="section-content2">
+      <h3>WHY US</h3>
+      <ul>
+        <li>Expert Trainers with Real Results</li>
+        <li>Customized Workout Plans Tailored to You</li>
+        <li>State-of-the-Art Facilities & Premium Equipment</li>
+        <li>Supportive Community That Motivates You</li>
+        <li>Focus on Both Physical and Mental Fitness</li>
+        <li> Flexible Membership Plans for Every Goal</li>
+      </ul>
+      <p>
+        Whether you’re aiming to build muscle, lose weight, improve mental focus, or simply feel better every day — Strong Body, Mind & Fitness is your partner in success. Join us and experience the difference.
+      </p>
+    </div>
+  </section>
+</section>
+<!-- footer -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Strong Body Mind</h2>
+          <p>Transform Your Body, Strengthen Your Mind</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#packages">Our Packages</a></li>
+              <li><a href="#news">Latest News</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Programs</h3>
+            <ul>
+              <li><a href="#workouts">Personal Training</a></li>
+              <li><a href="#workouts">Group Classes</a></li>
+              <li><a href="#nutrition">Nutrition Plans</a></li>
+              <li><a href="#workouts">Online Coaching</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+              <li>123 Fitness Avenue</li>
+              <li>Workout City, WC 12345</li>
+              <li>(555) 123-4567</li>
+              <li>info@strongbodymind.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Strong Body Mind. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+<script>
+  /* ================= navbar hamburger================= */
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navbar = document.querySelector(".nav-list");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navbar.classList.toggle("active");
+  });
+});
+</script>
+</body>
+</html>

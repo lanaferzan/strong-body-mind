@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Body Mind</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #000000; /* Light gray background */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar for muscle group search */
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: 100vh; /* Full height of the screen */
+    background-color: #232222; /* Black background */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    color: #f67140;
+    margin-bottom: 15px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f67140;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for the color change */
+}
+
+/* Button hover effect: when mouse hovers over the button */
+.sidebar button:hover {
+    background-color: #FF5500; /* Slightly brighter orange on hover */
+}
+
+/* Top Bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1b1b;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/* Title */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* Highlighted Letters */
+.highlight {
+    color: #f67140;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #f67140;
+}
+
+/* Grid for exercises */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    margin-left: 220px; /* Ensure grid is not hidden behind sidebar */
+    margin-top: 80px;
+}
+
+/* Exercise Block Styling */
+.exercise-block {
+    background-color: #f67140;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.exercise-block h2,
+.exercise-block p {
+    color: black;
+}
+
+.exercise-block h2 {
+    margin-bottom: 8px;
+}
+
+.exercise-block img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.exercise-block p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 10px;
+    text-align: justify;
+}
+    </style>
+
+
+    <!-- Sidebar for muscle group search -->
+    <div class="sidebar">
+        <h3>Search by Muscle</h3>
+        <button>Chest</button>
+        <button>Legs</button>
+        <button>Core</button>
+        <button>Back</button>
+        <button>Shoulders</button>
+        <button>Arms</button>
+    </div>
+
+    <!-- Top Bar with Title and Navbar Links -->
+    <div class="top-bar">
+        <h1><span class="highlight">S</span>trong <span class="highlight">B</span>ody <span class="highlight">M</span>ind</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="exersices.html">Workouts</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#nutrition">Nutrition</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="d1">
+
+    <!-- Exercises Section -->
+    <div class="grid-container">
+        <!-- Exercise 1 -->
+        <div class="exercise-block">
+            <h2>Push-Up</h2>
+            <img src="pics/push up 1.png" alt="Push-Up">
+            <p>A fundamental upper-body exercise that strengthens the chest, shoulders, and arms.</p>
+        </div>
+
+        <!-- Exercise 2 -->
+        <div class="exercise-block">
+            <h2>Squat</h2>
+            <img src="pics/squat.png" alt="Squat">
+            <p>Strengthens the legs and glutes by simulating a sitting motion.</p>
+        </div>
+
+        <!-- Exercise 3 -->
+        <div class="exercise-block">
+            <h2>Plank</h2>
+            <img src="pics/blank.png" alt="Plank">
+            <p>An isometric core exercise that builds abdominal strength and posture.</p>
+        </div>
+
+        <!-- Exercise 4 -->
+        <div class="exercise-block">
+            <h2>Russian Twists</h2>
+            <img src="pics/Russian Twist.png" alt="Russian Twists">
+            <p>A seated core exercise that strengthens the obliques by twisting the torso from side to side.</p>
+        </div>
+
+        <!-- Exercise 5 -->
+        <div class="exercise-block">
+            <h2>Deadlift</h2>
+            <img src="pics/deadleft.png" alt="Deadlift">
+            <p>A weightlifting movement that primarily targets the back, glutes, and hamstrings.</p>
+        </div>
+
+        <!-- Exercise 6 -->
+        <div class="exercise-block">
+            <h2>Bench Press</h2>
+            <img src="pics/pench press.png" alt="Bench Press">
+            <p>A compound upper-body exercise that targets the chest, shoulders, and triceps.</p>
+        </div>
+
+        <!-- Exercise 7 -->
+        <div class="exercise-block">
+            <h2>Mountain Climbers</h2>
+            <img src="pics/Mountain Climbers.png" alt="Mountain Climbers">
+            <p>A full-body exercise that engages the core, shoulders, and legs while improving cardiovascular endurance.</p>
+        </div>
+
+        <!-- Exercise 8 -->
+        <div class="exercise-block">
+            <h2>Lunges</h2>
+            <img src="pics/lanches.png" alt="Lunges">
+            <p>A lower-body exercise that works the glutes, quads, and hamstrings.</p>
+        </div>
+
+        <!-- Exercise 9 -->
+        <div class="exercise-block">
+            <h2>Burpees</h2>
+            <img src="pics/Burpees.png" alt="Burpees">
+            <p>A high-intensity, full-body exercise that combines squats, push-ups, and jumps.</p>
+        </div>
+
+        <!-- Exercise 10 -->
+        <div class="exercise-block">
+            <h2>Jumping Jacks</h2>
+            <img src="pics/Jumping Jacks.png" alt="Jumping Jacks">
+            <p>A cardio exercise that increases heart rate and engages the full body.</p>
+        </div>
+
+        <!-- Exercise 11 -->
+        <div class="exercise-block">
+            <h2>Side Plank</h2>
+            <img src="pics/photo for Side Plank.jpg" alt="Side Plank">
+            <p>A core exercise that targets the obliques and helps improve balance and stability.</p>
+        </div>
+
+        <!-- Exercise 12 -->
+        <div class="exercise-block">
+            <h2>Tricep Dips</h2>
+            <img src="pics/Tricep Dips.png" alt="Tricep Dips">
+            <p>Targets the triceps by lowering and raising the body using the arms, typically performed using a bench or chair.</p>
+        </div>
+
+        <!-- Exercise 13 -->
+        <div class="exercise-block">
+            <h2>Bicep Curls</h2>
+            <img src="pics/Bicep Curls.png" alt="Bicep Curls">
+            <p>A weight training exercise that primarily works the biceps, using dumbbells or a barbell.</p>
+        </div>
+
+        <!-- Exercise 14 -->
+        <div class="exercise-block">
+            <h2>Leg Raises</h2>
+            <img src="pics/Leg Raises.jpg" alt="Leg Raises">
+            <p>A core exercise that targets the lower abdominal muscles by raising the legs while lying flat on the ground.</p>
+        </div>
+
+        <!-- Exercise 15 -->
+        <div class="exercise-block">
+            <h2>Pull-Ups</h2>
+            <img src="pics/Pull-Ups.png" alt="Pull-Ups">
+            <p>An upper-body exercise that targets the back, shoulders, and arms, performed by pulling up the body using a bar.</p>
+        </div>
+
+        <!-- Exercise 16 -->
+        <div class="exercise-block">
+            <h2>High Knees</h2>
+            <img src="pics/High Knees.jpg" alt="High Knees">
+            <p>A cardio exercise that improves lower body strength and endurance while also increasing heart rate.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

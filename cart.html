@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <style>
+    /* ================= main ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      line-height: 1.5;
+      color:  #ffffff;
+      background-color: #2e2e2e;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    ul{
+      list-style: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+/* ================= header ================= */
+
+    .header {
+      position: relative;
+      background-color: #2e2e2e;
+      color: white;
+    }
+
+    .nav-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000000ef;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:16px 35px;
+    }
+
+    .logo h1 {
+      font-size: 27px;
+      font-weight: 600;
+    }
+    .logo h1 span{
+      color: #f67140;
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-list a {
+      color: #F0F4F8;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      padding: 8px 0;
+    }
+
+    .nav-list a:hover {
+      color: #f67140;
+    }
+/* ================= hero section ================= */
+
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 600px;
+      background: linear-gradient(rgba(15, 15, 15, 0.7), rgba(3, 3, 3, 0.7)),
+      url('pics/black\ and\ orange\ gym\ \ (1).jpg') no-repeat center center/cover;
+    }
+
+    .hero h1 {
+      font-size: 70px;
+      color: #fcfcfc;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #fafafa;
+      max-width: 700px;
+    }
+
+ /* ================= shopping cart table ================= */
+
+.cart-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cart-table th{
+  background-color: #f67140;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+.cart-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eeeeee86;
+  vertical-align: middle;
+}
+
+
+.cart-table img {
+  width: 60px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.quantity-input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* ================= Buttons ================= */
+
+.clear-cart {
+    margin-bottom: 50px;
+    margin-left: 20px;
+  background-color: #464646;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.clear-cart:hover {
+  background-color: #e60000;
+}
+.pay-now
+{
+margin-bottom: 50px;
+margin-left: 20px;
+ background-color: #464646;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.pay-now:hover {
+  background-color: #68e600;
+}
+
+/* ================= total price ================= */
+
+#total-price {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+  color: #fdfdfd;
+  margin-right: 20px;
+}
+
+/* ================= toggle area ================= */ 
+/* minimize the nav bar to fit the screen */
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: azure;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-list {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #000000ef;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s; /* Added missing semicolon */
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-list.active {
+    left: 0;
+  }
+}
+
+
+/* ================= responsive design ================= */
+
+@media (max-width: 600px) {
+    .hero {
+    height: 400px;
+  }
+   .hero h1 {
+    font-size: 30px;
+  }
+  td, th {
+    font-size: 14px;
+  }
+  td img {
+    width: 40px;
+  }
+  .quantity-input {
+    width: 40px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">
+        <!-- logo  -->
+        <h1><span>S</span>trong <span>B</span>ody <span>M</span>ind</h1>
+      </div>
+      <!-- nav bar  -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="home.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item"><a href="#workouts">Workouts</a></li>
+          <li class="nav-item"><a href="products.html">Products</a></li>
+          <li class="nav-item"><a href="#nutrition">Nutrition</a></li>
+          <li class="nav-item"><a href="#contact">Contact Us</a></li>
+        </ul>
+           <!-- minimized navbar for responsive devices  -->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+  
+        </div>
+      </nav>
+    </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1> Shopping Cart</h1>
+  </section>
+
+  <section class="mainsection">
+    <!-- table Section -->
+    <section class="cart">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Remove</th>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body">
+        </tbody>
+      </table>
+
+      <p class="total-price" id="total-price">Total: $0.00</p>
+
+      <!-- Pay Now Button -->
+       <a href="paymentmethod.html">
+<button class="pay-now">Pay Now</button>
+</a>
+      <!-- Clear Cart Button -->
+      <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+    </section>
+  </section>
+
+  <script>
+   
+      /* ================= navbar hamburger================= */
+     
+document.addEventListener("DOMContentLoaded", () => {
+  //select the hamburger menu icon
+  const hamburger = document.querySelector(".hamburger");
+  //select the navigation list (the menu items)
+  const navbar = document.querySelector(".nav-list");
+
+  //click event on the hamburger icon
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navbar.classList.toggle("active");
+  });
+});
+
+  /* ================= adding to  shopping cart table ================= */
+
+
+document.addEventListener('DOMContentLoaded', loadCart);
+
+//load and display cart items
+function loadCart() {
+  let cartBody = document.getElementById('cart-body');
+  let totalPrice = 0; // initialize the total price to zero
+  cartBody.innerHTML = '';// clear previous cart items
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    if (key.endsWith('_price') || key.endsWith('_image')) continue;
+
+    let name = key; // product name (key)
+    let quantity = parseInt(localStorage.getItem(name)); // get quantity
+    let price = parseFloat(localStorage.getItem(name + '_price')); // get price
+    let image = localStorage.getItem(name + '_image'); // get image URL
+
+    let subtotal = (price * quantity).toFixed(2); // calculate subtotal
+    totalPrice += parseFloat(subtotal); // add to total price
+
+    // dynamically create a table row for this cart item
+    cartBody.innerHTML += `
+      <tr>
+        <td><button class="remove-btn" onclick="removeItem('${name}')">X</button></td>
+        <td><img src="${image}" alt="Product" width="50"></td>
+        <td>${name}</td>
+        <td>$${price.toFixed(2)}</td>
+        <td><input type="number" class="quantity-input" value="${quantity}" min="1" onchange="updateQuantity('${name}', this.value)"></td>
+        <td class="subtotal">$${subtotal}</td>
+      </tr>
+    `;
+  }
+
+  // display the total price
+  document.getElementById('total-price').textContent = `Total: $${totalPrice.toFixed(2)}`;
+}
+
+/* ================= remove a single item from cart ================= */
+function removeItem(name) {
+  // Remove item data from localStorage
+  localStorage.removeItem(name);
+  localStorage.removeItem(name + '_price');
+  localStorage.removeItem(name + '_image');
+  loadCart();
+}
+
+/* ================= change the item quantity ================= */
+function updateQuantity(name, quantity) {
+  localStorage.setItem(name, quantity);
+  loadCart();
+}
+
+/* ================= clear cart ================= */
+function clearCart() {
+  let keysToRemove = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    if (!key.endsWith('_price') && !key.endsWith('_image')) {
+      keysToRemove.push(key);
+      keysToRemove.push(key + '_price');
+      keysToRemove.push(key + '_image');
+    }
+  }
+
+  keysToRemove.forEach(key => localStorage.removeItem(key));
+  loadCart();
+}
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+         /* ================= main================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(22, 22, 22, 0.894), rgba(33, 33, 33, 0.88)),
+                url(pics/black\ and\ orange\ gym\ \ \(1\).jpg);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+      /* ================= payment box================= */
+
+        .container {
+            background: #0e0e0ebd;
+            width: 80%;
+            display: flex;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex-wrap: wrap; 
+        }
+
+         /* ================= left side ================= */
+
+        .left {
+            width: 20%;
+            border-right: 1px solid #434343;
+            padding: 10px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .left p {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .methods div {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #c1c1c1;
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+
+        .methods div i {
+            margin-right: 8px;
+            color: #cdcdcd;
+        }
+
+        .methods div.active {
+            background: #52525255;
+            color: #ff7b00;
+            font-weight: bold;
+        }
+
+        .methods div.active i {
+            color: #ff7b00;
+        }
+
+    /* ================= center area================= */
+
+        .center {
+            width: 50%;
+            padding: 20px;
+            flex: 2;
+            min-width: 250px; 
+        }
+
+        .center img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .center form p {
+            color: #f5f5f5;
+            font-size: 14px;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #373737;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-icon {
+            position: relative;
+        }
+
+        .input-icon input {
+            padding-right: 30px;
+        }
+
+        .input-icon i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f5f5f5;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #ff7b00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffaa5b;
+        }
+
+         /* ================= right side================= */
+
+        .right {
+            width: 30%;
+            border-left: 1px solid #3f3f3f;
+            padding: 20px;
+            flex: 1;
+            min-width: 250px; 
+        }
+
+        .right p {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .right img {
+            margin-top: 20px;
+        }
+
+     /* ================= responsive design================= */
+
+        @media (max-width: 1200px) {
+            .container {
+                width: 90%;
+            }
+
+            .left, .center, .right {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .left {
+                font-size: 12px;
+            }
+
+            .center img {
+                width: 200px;
+            }
+
+            input, button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .right img {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .left p,
+            .center form p,
+            .right p {
+                font-size: 12px;
+            }
+
+            .methods div {
+                font-size: 12px;
+            }
+
+            input, button {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .center img {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- payment box  -->
+    <div class="container">
+        <!-- left side: payment methods -->
+        <div class="left">
+            <p>Payment methods</p>
+            <hr>
+            <div class="methods">
+                <div onclick="selectMethod('card')" id="option-card">
+                    <i class="fa-solid fa-credit-card"></i> Payment by card
+                </div>
+                <div onclick="selectMethod('bank')" id="option-bank">
+                    <i class="fa-solid fa-building-columns"></i> Internet banks
+                </div>
+                <div onclick="selectMethod('wallet')" id="option-wallet">
+                    <i class="fa-solid fa-wallet"></i> Apple/Google pay
+                </div>
+            </div>
+        </div>
+
+       <!-- center: card info  -->
+        <div class="center">
+            <img src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="250">
+            <form>
+                <p>Card number</p>
+                <div class="input-icon">
+                    <input placeholder="Card number" maxlength="16" required>
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+
+                <div class="row">
+                    <div>
+                        <p>Expiry date</p>
+                        <input placeholder="MM/YY" maxlength="5" required>
+                    </div>
+                    <div>
+                        <p>CVV</p>
+                        <div class="input-icon">
+                            <input placeholder="CVV" maxlength="3" required>
+                            <i class="fa-solid fa-circle-question" title="3 digits on back"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Email</p>
+                <input type="email" placeholder="example@email.com" required>
+
+                <button type="submit">PAY NOW</button>
+            </form>
+        </div>
+
+        <!-- right side : order info  -->
+        <div class="right">
+            <p>Order information</p>
+            <hr>
+            <div>
+                <p>Order description</p>
+                <p>Test payment</p>
+                <img src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="200">
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // submitted message// 
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            // Show success message
+            alert('Payment Successful! Thank you.');
+
+            // after done goes back to home page
+            window.location.href = 'home.html';
+        });
+
+    </script>
+</body>
+</html>
